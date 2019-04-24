@@ -162,11 +162,11 @@ def main():
 
     tree = Node(PHILOSOPHY_ARTICLE)
 
-    turn = 5
+    turn = 1
 
     turn_log_message = 'Starting Turn {}: {}'
 
-    while turn < 11:
+    while turn <= 500:
         article_title = get_initial_article_title()
         
         if article_title in article_cache:

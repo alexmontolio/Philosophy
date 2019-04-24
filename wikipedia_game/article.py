@@ -175,7 +175,11 @@ def get_next_article_title(article):
         paragraph_ = remove_parenthesize_text_from_paragraph(paragraph)
 
         try:
-            article_path = paragraph_.find('a')['href']
+            article_path = paragraph_.find('a')
+            if not article_path:
+                continue
+
+            article_path = article_path.get('href')
         except TypeError:
             continue
 
