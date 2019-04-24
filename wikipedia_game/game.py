@@ -112,7 +112,6 @@ def output_results_to_csv(results):
 
         for result in results:
             distance = result[0] or 'No Path'
-            print(distance)
             article = result[1]
             writer.writerow([article, distance])
 
